@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
 import { showStatusModal } from '../../actions/status';
+import { useWeb3React } from '@web3-react/core';
 import { validateAmount, validateToAddress } from './_validation';
 import Button from '../../components/Button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const Initiate = (props) => {
+    const { active } = useWeb3React();
+
     const showStatusModal = () => {
         if (props.show) {
             return;
@@ -16,6 +19,7 @@ const Initiate = (props) => {
 
     const disabled = (
         props.inProgress ||
+        active === false ||
         validateAmount(props.amount.value).message !== '' ||
         validateToAddress(props.toAddress.value).message !== ''
     );

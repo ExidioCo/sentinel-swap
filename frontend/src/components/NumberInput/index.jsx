@@ -5,6 +5,7 @@ import React from 'react';
 const NumberInput = ({
     className,
     onChange,
+    onKeyDown,
     placeholder,
     value,
 }) => {
@@ -15,6 +16,7 @@ const NumberInput = ({
             type="number"
             value={value}
             onChange={onChange}
+            onKeyDown={onKeyDown}
         />
     );
 };
@@ -24,6 +26,7 @@ NumberInput.propTypes = {
     placeholder: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
+    onKeyDown: PropTypes.func.isRequired,
 };
 
 export default NumberInput;

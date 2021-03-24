@@ -1,6 +1,6 @@
 import Address from './ToAddress';
 import Amount from './Amount';
-import Card from '../../components/Card';
+import Grid from '../../components/Grid';
 import Connect from './Connect';
 import ModalConnect from './ModalConnect';
 import ModalStatus from './ModalStatus';
@@ -18,12 +18,12 @@ const Home = () => {
                     className="title"
                     value="swap"
                 />
-                <Card className="card-swap">
+                <Grid className="grid-swap">
                     <Connect/>
                     <Address/>
                     <Amount/>
                     <Submit/>
-                </Card>
+                </Grid>
             </div>
         </>
     );

@@ -33,7 +33,7 @@ const Amount = (props) => {
                 className="label"
                 help={{
                     display: true,
-                    title: 'Help',
+                    title: 'SENT Tokens that needed to be swapped to DVPN',
                 }}
                 value={'Swap Amount'}/>
             <div className="swap-number-input-amount">

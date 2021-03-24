@@ -35,7 +35,7 @@ const ETHER = (state = {
             ...state,
             error: {
                 ...state.error,
-                message: data.error.message,
+                message: data.message,
             },
             inProgress: false,
         };
@@ -71,7 +71,7 @@ const TOKEN = (state = {
             ...state,
             error: {
                 ...state.error,
-                message: data.error.message,
+                message: data.message,
             },
             inProgress: false,
         };

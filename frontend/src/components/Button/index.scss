@@ -46,16 +46,8 @@
 }
 
 .button-dark-mode {
-  text-align: center;
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.button-faq {
-  width: 5.102em;
+  width: 5em;
+  text-align: left;
   height: 2.47597em;
   border: none;
   outline: none;
@@ -63,9 +55,24 @@
   text-transform: uppercase;
   border-radius: 2.925em;
   font-weight: 500;
-  font-size: 14px;
-  color: #55678B;
-  background-color: #E3ECF3;
+  font-size: 0.875em;
+  padding: 0;
+  background: transparent;
+}
+
+.button-faq {
+  width: 5em;
+  height: 2.47597em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 2.925em;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #55678b;
+  padding: 0;
+  background-color: #e3ecf3;
 }
 
 .disabled {

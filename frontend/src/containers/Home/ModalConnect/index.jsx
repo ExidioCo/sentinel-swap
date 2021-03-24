@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { hideConnectModal } from '../../../actions/connect';
-import LedgerDevice from './LedgerDevice';
 import MetaMask from './MetaMask';
 import Modal from '../../../components/Modal';
 import PropTypes from 'prop-types';
@@ -24,7 +23,6 @@ const ModalConnect = (props) => {
             title="Select wallet"
             onClose={hideConnectModal}>
             <MetaMask/>
-            <LedgerDevice/>
         </Modal>
     );
 };

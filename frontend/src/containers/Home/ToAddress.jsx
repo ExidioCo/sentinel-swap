@@ -21,7 +21,7 @@ const ToAddress = (props) => {
                 className="label"
                 help={{
                     display: true,
-                    title: 'Help',
+                    title: 'Non ERC-20 Sentinel address; starts with "sent"',
                 }}
                 value="To Address"
             />

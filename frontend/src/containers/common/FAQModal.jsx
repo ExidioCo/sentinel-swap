@@ -69,7 +69,7 @@ const FAQModal = (props) => {
                 }
             </div>
             <div className="foot-note">
-                Learn More
+                <span> Learn more at </span>
                 <a
                     className="no-link"
                     href="https://sentinel.co"

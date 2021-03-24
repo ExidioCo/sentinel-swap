@@ -33,10 +33,10 @@ const ModalStatus = (props) => {
         if (props.show === false) {
             return;
         }
-        if (props.txAllowanceInProgress) {
+        if (props.txAllowanceError.message === '' && props.txAllowanceConfirmed === false) {
             return;
         }
-        if (props.txBurnInProgress) {
+        if (props.txBurnError.message === '' && props.txBurnConfirmed === false) {
             return;
         }
 
@@ -220,8 +220,14 @@ ModalStatus.propTypes = {
             message: PropTypes.string.isRequired,
         }).isRequired,
     }).isRequired,
-    txAllowanceInProgress: PropTypes.bool.isRequired,
-    txBurnInProgress: PropTypes.bool.isRequired,
+    txAllowanceConfirmed: PropTypes.bool.isRequired,
+    txAllowanceError: PropTypes.shape({
+        message: PropTypes.string.isRequired,
+    }).isRequired,
+    txBurnConfirmed: PropTypes.bool.isRequired,
+    txBurnError: PropTypes.shape({
+        message: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
 const stateToProps = (state) => ({
@@ -229,8 +235,10 @@ const stateToProps = (state) => ({
     inProgress: state.tx.burn.inProgress,
     show: state.status.show,
     toAddress: state.tx.burn.toAddress,
-    txAllowanceInProgress: state.tx.allowance.inProgress,
-    txBurnInProgress: state.tx.allowance.inProgress,
+    txAllowanceConfirmed: state.tx.allowance.result.confirmed,
+    txAllowanceError: state.tx.allowance.error,
+    txBurnConfirmed: state.tx.allowance.result.confirmed,
+    txBurnError: state.tx.burn.error,
 });
 
 const actionsToProps = {

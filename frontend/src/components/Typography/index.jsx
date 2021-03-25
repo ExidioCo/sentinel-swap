@@ -7,9 +7,9 @@ const Typography = ({
     value,
 }) => {
     return (
-        <p className={className}>
+        <div className={className}>
             {value}
-        </p>
+        </div>
     );
 };
 

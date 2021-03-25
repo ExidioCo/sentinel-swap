@@ -23,7 +23,7 @@ const ToAddress = (props) => {
                     display: true,
                     title: 'Non ERC-20 Sentinel address; starts with "sent"',
                 }}
-                value="Receiver Address"
+                value="Mainnet tokens receiving address"
             />
             <div className="swap-text-input-to-address">
                 <TextInput

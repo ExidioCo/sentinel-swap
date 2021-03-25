@@ -15,6 +15,10 @@ const Home = () => {
             <ModalStatus/>
             <div className="swap">
                 <Typography
+                    className="title-warning"
+                    value="Please use this tool to swap your ERC-20 Sentinel tokens for mainnet Sentinel (Cosmos-based) tokens"
+                />
+                <Typography
                     className="title"
                     value="swap"
                 />

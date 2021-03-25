@@ -2,11 +2,11 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 import { LedgerConnector } from '@web3-react/ledger-connector';
 
 export const injectedConnector = new InjectedConnector({
-    supportedChainIds: [1, 3],
+    supportedChainIds: [1],
 });
 
 export const ledgerConnector = new LedgerConnector({
-    chainId: 3,
-    url: 'https://ropsten.infura.io/v3/374c9feef1a348aa987ad63f052cb8fe',
+    chainId: 1,
+    url: 'https://mainnet.infura.io/v3',
     pollingInterval: 12000,
 });

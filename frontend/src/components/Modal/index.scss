@@ -81,6 +81,7 @@
     box-sizing: border-box;
     line-height: 2em;
     max-height: 75%;
+    min-width: 57.75em;
     width: 50%;
     overflow-y: scroll;
 
@@ -117,6 +118,5 @@
       color: #55678b;
       text-transform: uppercase;
     }
-
   }
 }
